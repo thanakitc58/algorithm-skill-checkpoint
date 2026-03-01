@@ -5,12 +5,11 @@ function sortProductsByPrice(products) {
     for (let j = 0; j < products.length - 1; j++) {
       //น้อยไปมาก > แต่ต้องการมากไปน้อยให้ใช้ < 
         if (products[j].price > products[j + 1].price) {
-          //ลืมวิธีเขียนเงื่อนไขสลับตำแหน่ง
-              [products[j]] = [products[j + 1]];
+          [products[j], products[j + 1]] = [products[j + 1], products[j]];
           }
     }
-    return products
   }
+  return products;
 }
 
 // Test case
